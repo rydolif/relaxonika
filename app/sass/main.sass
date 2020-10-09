@@ -50,74 +50,6 @@
 		color: #fff
 		box-shadow: 0 0 25px 0 rgba($accent, 1)
 
-// -----HAMBURGER-----
-.hamburger
-	display: none
-	position: absolute
-	right: 15px
-	top: 55%
-	padding: 0
-	transform: translate(0, -50%)
-	border: none
-	background-color: transparent
-	transition: all .3s
-
-	&:focus,
-	&:hover
-		outline: none
-		opacity: .7
-
-	&__box
-		position: relative
-		display: inline-block
-		width: 35px
-		perspective: 80px
-
-	&__item
-		position: absolute
-		right: 0
-		top: 0
-		width: 35px
-		height: 3px
-		background-color: #fff
-		border-radius: 4px
-		transition: all .2s
-		bottom: 0
-
-		&::before
-			content: ""
-			display: block
-			position: absolute
-			right: 0
-			top: -10px
-			background-color: #fff
-			width: 35px
-			height: 3px
-			transition: transform 0s 0.1s
-
-		&::after
-			content: ""
-			display: block
-			position: absolute
-			right: 0
-			top: -20px
-			background-color: #fff
-			width: 35px
-			height: 3px
-			transition: transform 0s 0.1s
-
-
-	&--active
-		z-index: 1001
-
-		.hamburger__item
-			background-color: transparent
-			transform: rotateY(180deg)
-			&::before
-				transform: translate3d(0, 0px, 0) rotate(45deg)
-			&::after
-				transform: translate3d(0, 10px, 0) rotate(-45deg)
-
 
 .header
 	position: absolute
@@ -377,6 +309,7 @@
 
 	&__btn
 		@extend .hero__btn
+		margin-bottom: 0
 
 
 .course
@@ -574,6 +507,7 @@
 
 	&__btn
 		@extend .hero__btn
+		margin-bottom: 0
 
 
 .properties
@@ -658,6 +592,9 @@
 				right: 0
 				top: 200px
 				max-width: 400px
+				
+			+r(767)
+				top: 155px
 			
 			+r(576)
 				position: relative
@@ -682,6 +619,47 @@
 				+r(992)
 					width: 36px
 					margin-right: 20px
+
+
+.statistics
+	+cover
+	background-image: url(../img/statistics__bg.png)
+	text-align: center
+	padding-top: 120px
+	padding-bottom: 70px
+
+	+r(992)
+		padding-top: 80px
+		padding: 40px
+	
+	+r(767)
+		padding: 70px 0 20px
+
+	h2
+		margin-bottom: 15px
+	
+	p
+		margin-bottom: 25px
+
+		+r(992)
+			margin-bottom: 15px
+
+	&__subtitle
+		font-family: $title
+		font-size: 21px
+		font-weight: 700
+
+		+r(992)
+			font-size: 18px
+
+		+r(576)
+			font-size: 16px
+
+	&__btn
+		@extend .hero__btn
+		margin-bottom: 0
+
+
 
 
 
