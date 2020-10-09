@@ -1,0 +1,142 @@
+
+//----------------------fonts---------------------
+$fonts: 'Gilroy', sans-serif
+$title: 'Intro', sans-serif
+//---------------------end-fonts---------------------
+
+//----------------------color---------------------
+$accent: #faa105
+$text: #ffffff
+$bg: #131314
+
+//---------------------end-color---------------------
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	font-family: $fonts
+	font-size: 20px
+	color: $text
+	line-height: 1.4
+	font-weight: 400
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	background-color: $bg
+	background-image: url(../img/body__bg.png)
+
+	+r(1200)
+		font-size: 18px
+	
+	+r(992)
+		font-size: 16px
+	
+	+r(767)
+		font-size: 14px
+
+::selection
+	background-color: $accent
+	color: #fff
+
+::placeholder
+	color: #666
+	
+h1, h2, h3, h4, h5, h6
+	font-weight: 700
+	line-height: 1.2
+	margin: 0
+	padding: 0
+	font-family: $title
+	color: $accent
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+b, strong
+	font-weight: 700
+
+p
+	margin: 0
+	padding: 0
+
+a,
+button
+	transition: all .6s
+	color: $text
+
+	&:focus,
+	&:hover,
+		outline: none
+		text-decoration: none
+		border: none
+		outline: none
+		color: $accent
+
+
+input, textarea, select
+	width: 100%
+	border: 1px solid #ebebeb
+	outline: none
+	box-shadow: none
+	// -webkit-appearance: none
+	font-size: 16px
+	box-shadow: 0 0 6px rgba(42, 63, 125, 0.34)
+	
+	&:focus:required:invalid
+		border-color: red
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&:required:valid
+		border-color: green
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&::placeholder
+		color: #c4c4c4
+		font-size: 12px
+		line-height: 50px
+
+input, select
+	height: 50px
+	line-height: 50px
+	padding: 0 25px
+
+	&::placeholder
+		line-height: 50px
+		font-size: 16px
+
+textarea
+	&::placeholder
+		line-height: 1.4
+
+label.error
+	position: absolute
+	bottom: -25px
+	right: 25px
+	left: 25px
+	transition: all .3s
+	animation: error .3s linear 1 forwards
+	color: #fff
+	text-align: center
+	font-weight: 600
+	background-color: red
+	border-radius: 10px
+	z-index: 1
+
+	&::before
+		content: ''
+		position: absolute
+		left: 50%
+		top: -8px
+		margin-left: -2px
+		border-bottom: 4px solid red
+		border-left: 4px solid transparent
+		border-right: 4px solid transparent
+		border-top: 4px solid transparent

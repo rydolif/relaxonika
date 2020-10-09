@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Relaxonika - Обучающий курс массажных практик</title>
+	<meta name="description" content="Startup HTML Optimized">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<a href="/" class="header__logo">Relaxonika - массажный клуб</a>
+
+			<div class="header__nav">
+				<ul class="header__soc">
+					<li><a href="#" target="_blank"><img src="img/header__fb.png" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/header__vk.png" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/header__in.png" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/header__you.png" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/header__tel.png" alt=""></a></li>
+				</ul>
+				<a href="tel:+79250294919" class="header__phone">+7 925 029 49 19</a>
+				<a href="#" class="header__btn btn">Запись на обучение</a>
+			</div>
+
+		</div>
+	</header>
+
+	<section class="hero">
+		<div class="container">
+
+			<h1>Обучающий курс массажных практик</h1>
+			<p>
+				Интенсивный курс, на котором ты всего за 6 занятий освоишь востребованную профессию
+				нашего времени, научишься снимать напряжение и стресс, добавишь "перчинку" в поток жизни,
+				научишься строить и развивать гармоничные личные отношения, познакомишься с новыми
+				людьми, обретёшь гармонию и уверенность в завтрашнем дне, и начнёшь
+				зарабатывать даже в условия кризиса.
+			</p>
+			<h3>Запись на бесплатный открытый урок 30 сентября 2020</h3>
+			<a href="#" class="hero__btn btn">Записаться на открытый урок</a>
+			<a href="#" class="hero__next"></a>
+		</div>
+	</section>
+
+	<section class="info">
+		<div class="container">
+
+			<div class="info__list">
+				<div class="info__item">
+					<h2>Вы познакомитесь</h2>
+					<p>
+						С фундаментальными знаниями психологии отношений: цикл контакта, механизмы 
+						сопротивления психики, их проявления, а также способы их снятия
+						<img src="img/info__item1.png" alt="">
+					</p>
+					<p>
+						С идеями сенсорной депривации и сенсорной стимуляции
+						<img src="img/info__item2.png" alt="">
+					</p>
+					<p>
+						С массажными техниками возбуждения и расслабления
+						<img src="img/info__item3.png" alt="">
+					</p>
+				</div>
+				<div class="info__item">
+					<h2>Вы научитесь</h2>
+					<p>
+						Практике общего массажа
+						<img src="img/info__item4.png" alt="">
+					</p>
+					<p>
+						Специальным техникам массажа: спортивный, антивозрастной, эротический, 
+						самомассаж,  антициллюлитный,  детский массаж, массаж лица иголовы и другие.
+						<img src="img/info__item5.png" alt="">
+					</p>
+					<p>
+						Экзотическим техникам восточного и азиатского массажа
+						<img src="img/info__item6.png" alt="">
+					</p>
+				</div>
+				<div class="info__item">
+					<h2>Вы получите</h2>
+					<p>
+						С фундаментальными знаниями психологии отношений: цикл контакта, механизмы 
+						сопротивления психики, их проявления, а также способы их снятия
+						<img src="img/info__item7.png" alt="">
+					</p>
+					<p>
+						С идеями сенсорной депривации и сенсорной стимуляции
+						<img src="img/info__item8.png" alt="">
+					</p>
+					<p>
+						С массажными техниками возбуждения и расслабления
+						<img src="img/info__item9.png" alt="">
+					</p>
+				</div>
+			</div>
+			<a href="#" class="info__btn btn">Записаться на обучение</a>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__container container"></div>
+	</footer>
+
+	<div class="modal modal--services">
+		<form action="sendmail.php" class="modal__form form" method="post">
+
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h2 class="modal__title">Оставьте заявку на <br>услугу</h2>
+			<input type="hidden" name="subject" value="Оставьте заявку на услугу">
+
+			<div class="modal__line">
+				<input type="text" name="name" placeholder="Имя" class="modal__input" required>
+			</div>
+			<div class="modal__line">
+				<input type="tel" name="phone" placeholder="Телефон" class="modal__input" required>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="modal__btn" name="submit">Отправить</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="modal modal--thanks">
+		<button class="close thanks_close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+		<h3>Спасибо за доверие!</h3>
+		<p>Мы обязательно с вами свяжемся!</p>
+	</div>
+
+</body>
+</html>
