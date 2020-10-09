@@ -34,12 +34,14 @@
 	width: fit-content
 	padding: 0 25px
 	border: 1px solid $accent
+	text-align: center
 
 	+r(992)
 		font-size: 16px
 
 	+r(767)
 		font-size: 14px
+		padding: 0 15px
 
 	&:hover,
 	&:focus
@@ -284,19 +286,6 @@
 .info
 	padding-bottom: 15px
 
-	h2
-		font-size: 36px
-		text-shadow: 5px 0 15px rgba($accent, .9)
-		margin-bottom: 30px
-
-		+r(992)
-			font-size: 32px
-			margin-bottom: 20px
-
-		+r(767)
-			margin-bottom: 15px
-			font-size: 24px
-
 	p
 		position: relative
 		margin-bottom: 25px
@@ -391,11 +380,313 @@
 
 
 .course
+	background-size: cover
+	background-repeat: no-repeat
+	background-image: url(../img/course__bg.png)
+	padding-top: 130px
+	padding-bottom: 100px
+
+	+r(1200)
+		padding-top: 100px
+		padding-bottom: 80px
+
+	+r(992)
+		+cover
+		padding-top: 40px
+		padding-bottom: 40px
+	
+	+r(576)
+		padding: 40px 0
+		
+
+	h2, h3
+		text-align: center
+
+	h2
+		margin-bottom: 20px
+
+	h3
+		font-size: 30px
+		margin-bottom: 50px
+
+		+r(992)
+			font-size: 24px
+			margin-bottom: 30px
+		
+		+r(576)
+			font-size: 20px
+
+	h4
+		font-size: 25px
+		color: $text
+		text-align: center
+		margin-bottom: 50px
+
+		+r(992)
+			margin-bottom: 30px
+			font-size: 20px
+
+		+r(576)
+			margin-bottom: 20px
+			font-size: 18px
+
+	br
+		+r(992)
+			display: none
+
+	&__list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		max-width: 980px
+		margin: 0 auto
+
+		&_item
+			width: 48%
+
+			+r(480)
+				width: 100%
+
+		ul
+			+r(480)
+				margin-bottom: 25px
+		
+		li
+			position: relative
+			padding-left: 35px
+			margin-bottom: 25px
+
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 2px
+				display: block
+				width: 24px
+				height: 24px
+				background-color: $accent
+				border-radius: 50%
+				box-shadow: 0 0 10px 0 rgba($accent, .7)
+
+			&:last-child
+				margin-bottom: 0
+
+	&__wrap
+		position: relative
+		padding-top: 55px
+		padding-bottom: 40px
+		max-width: 980px
+		margin: 0 auto
+
+		+r(767)
+			padding: 30px 0
+
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			left: 50%
+			transform: translate(-50%, -50%)
+			top: 50%
+			bottom: 0
+			height: 85%
+			width: 5px
+			background-color: $accent
+
+			+r(480)
+				display: none
+
+		img
+			max-width: 95%
+
+			+r(480)
+				width: 100%
+				max-width: 100%
+
+		&_block
+			display: flex
+			position: relative
+			width: 50%
+			margin-right: 50%
+			margin-top: -5px
+			
+			+r(767)
+				margin-top: 0
+				margin-bottom: 20px
+
+			+r(480)
+				width: 100%
+				margin-right: 0
+
+			&:nth-child(even)
+				margin-left: 50%
+				margin-right: 0
+				justify-content: flex-end
+
+				+r(480)
+					margin-left: 0
+
+				.course__wrap_text
+					left: auto
+					right: 50%
+
+					+r(767)
+						right: 90%
+
+					+r(767)
+						right: 60%
+
+					+r(480)
+						right: 0
+
+		&_text
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(0, -50%)
+			width: 85%
+			background-color: $text
+			font-size: 19px
+			color: #3a3a3d
+			padding: 15px 20px
+
+			+r(1200)
+				font-size: 16px
+				padding: 10px
+
+			+r(767)
+				width: 110%
+				left: 90%
+			
+			+r(576)
+				font-size: 14px
+				width: 140%
+				left: 60%
+			
+			+r(480)
+				left: 0%
+				width: 100%
+				bottom: 0
+				top: auto
+				transform: translate(0, 0)
+				padding: 5px
+				font-size: 12px
+
+	&__btn
+		@extend .hero__btn
+
+
+.properties
+	padding-top: 80px
+	padding-bottom: 135px
+
+	+r(992)
+		padding-top: 40px
+		padding-bottom: 90px
+
+	+r(767)
+		padding: 30px 0
+
+	h2
+		text-align: center
+
+	&__subtitle
+		text-align: center
+		margin-bottom: 20px
+
+	&__price
+		display: flex
+		max-width: 490px
+		width: 100%
+		padding: 20px 30px
+		margin: 0 auto
+		background-color: $text
+		color: #4d4d50
+
+		img
+			margin-right: 30px
+		
+		span
+			color: $accent
+
+	&__info
+		position: relative
+		padding-top: 30px
+		max-width: 970px
+		margin: 0 auto
+
+		&_img
+			max-width: 60%
+
+			+r(576)
+				display: block
+				margin: 0 auto 20px
+
+		&_first
+			position: absolute
+			top: 5px
+			right: 0
+			max-width: 490px
+			width: 100%
+			background-color: $text
+			padding: 40px 25px 60px 25px
+			color: #4d4d50
+
+			+r(992)
+				padding: 20px
+				max-width: 400px
+			
+			+r(576)
+				position: relative
+				top: 0
+				right: auto
+				max-width: 100%
+				margin-bottom: 20px
+
+		&_last
+			position: absolute
+			top: 280px
+			right: 65px
+			background-color: $text
+			max-width: 485px
+			color: #4d4d50
+			padding: 40px 15px 30px 20px
+			box-shadow: 0 0 25px 0 rgba($bg, .4)
+
+			+r(992)
+				padding: 20px
+				right: 0
+				top: 200px
+				max-width: 400px
+			
+			+r(576)
+				position: relative
+				top: 0
+				right: auto
+				max-width: 100%
+
+			p
+				display: flex
+				align-items: flex-start
+				margin-bottom: 35px
+
+				+r(576)
+					margin-bottom: 15px
+
+				&:last-child
+					margin-bottom: 0
+
+			img
+				margin-right: 30px
+
+				+r(992)
+					width: 36px
+					margin-right: 20px
+
 
 
 .footer
-	&__container
-		+between
+	height: 500px
 
 
 // -----MODAL-----

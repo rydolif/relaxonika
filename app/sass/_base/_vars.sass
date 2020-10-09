@@ -51,6 +51,25 @@ h1, h2, h3, h4, h5, h6
 	font-family: $title
 	color: $accent
 
+
+h2
+	font-size: 36px
+	text-shadow: 5px 0 15px rgba($accent, .9)
+	margin-bottom: 30px
+
+	+r(992)
+		font-size: 32px
+		margin-bottom: 20px
+
+	+r(767)
+		margin-bottom: 15px
+		font-size: 24px
+
+	span
+		color: $text
+		text-shadow: 5px 0 15px rgba($accent, .0)
+
+
 ul
 	margin: 0
 	padding: 0
