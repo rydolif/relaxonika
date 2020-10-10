@@ -903,6 +903,193 @@
 	padding-top: 75px
 	padding-bottom: 20px
 
+	+r(992)
+		padding-top: 40px
+
+	h2
+		text-align: center
+		margin-bottom: 10px
+
+	&__subtitle
+		color: $accent
+		text-align: center
+		font-size: 23px
+		font-weight: 700
+		margin-bottom: 30px
+
+		+r(992)
+			font-size: 20px
+		
+		+r(576)
+			font-size: 18px
+
+		span
+			color: $text
+
+	&__form
+		max-width: 950px
+		margin: 0 auto
+		
+		&_wrap
+			border-top: 3px solid $accent
+			border-bottom: 3px solid $accent
+			padding: 35px 0
+
+		&_item
+			margin-bottom: 30px
+
+			+r(767)
+				margin-bottom: 20px
+
+			&:last-child
+				margin-bottom: 0
+
+		label
+			+transition
+			position: relative
+			display: flex
+			justify-content: space-between
+			padding-left: 60px
+			cursor: pointer
+			margin-bottom: 0
+			margin-right: 0
+			font-weight: 700
+			font-family: $title
+			font-size: 25px
+			color: $text
+
+			+r(992)
+				font-size: 20px
+			
+			+r(767)
+				font-size: 18px
+				padding-left: 40px
+			
+			+r(576)
+				font-size: 16px
+			
+			+r(480)
+				padding-left: 20px
+				font-size: 14px
+
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+
+			&::before
+				top: -3px
+				width: 40px
+				height: 40px
+				border-radius: 50%
+				border: 3px solid $accent
+
+				+r(767)
+					width: 30px
+					height: 30px
+
+				+r(480)
+					width: 15px
+					height: 15px
+					top: 3px
+
+			&::after
+				width: 17px
+				height: 37px
+				border-radius: 3px
+				border-top: 3px solid $text
+				border-left: 3px solid $text
+				transform: translate(0, 0) rotate(-135deg)
+				left: 16px
+				top: -8px
+				+transition
+
+				+r(992)
+					width: 12px
+					height: 27px
+					left: 12px
+				
+				+r(480)
+					width: 8px
+					height: 14px
+					left: 6px
+					top: 0px
+
+			span
+				+r(767)
+					width: 70%
+
+				&:nth-child(2)
+					white-space: nowrap
+
+					+r(767)
+						width: 28%
+
+					+r(480)
+						width: auto
+						margin-left: 7px
+
+
+		input[type="checkbox"]
+			display: none
+
+		input[type="checkbox"]:checked + label
+			color: $accent
+			text-shadow: 5px 0 15px rgba($accent, .5)
+
+			&::after
+				opacity: 1
+
+		input[type="checkbox"] + label::after
+			opacity: 0
+
+		&_price
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding-top: 30px
+			padding-bottom: 85px
+			color: $accent
+			font-size: 36px
+
+			+r(992)
+				padding: 30px 0
+				font-size: 30px
+			
+			+r(767)
+				padding: 15px 0
+				font-size: 22px
+		
+		&_btn
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			+r(767)
+				flex-direction: column
+
+			.btn
+				@extend .hero__btn
+				margin-bottom: 0
+				flex-wrap: wrap
+				padding-top: 3px
+				padding-bottom: 3px
+
+				+r(767)
+					width: 80%
+				
+				+r(576)
+					width: 100%
+
+				&:first-child
+					+r(767)
+						margin-bottom: 15px
+
+			span
+				color: #000000
+
+
 
 .footer
 	height: 500px
