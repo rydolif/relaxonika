@@ -689,7 +689,6 @@
 		padding-right: 40px
 		padding-left: 40px
 
-
 	&__slide
 		border-radius: 50%
 		opacity: 0.6
@@ -704,7 +703,6 @@
 	.swiper-slide-active
 		img
 			+r(576)
-				transform: scale(1.1)
 				border: 2px solid $accent
 				box-shadow: 0 0 25px 0 rgba($accent, .7)
 
@@ -752,12 +750,13 @@
 	&__next
 		display: block
 		position: absolute
-		top: 40%
+		top: 44%
 		transform: translate(0, -50%)
 		width: 25px
 		height: 25px
 		border-top: 5px solid $accent
 		border-left: 5px solid $accent
+		z-index: 2
 
 	&__prev
 		left: 10px
@@ -1229,6 +1228,141 @@
 	&__btn
 		@extend .hero__btn
 		margin-bottom: 0
+
+
+.video
+	padding-top: 105px
+	padding-bottom: 30px
+
+	+r(992)
+		padding-top: 70px
+
+	h2
+		text-align: center
+		margin-bottom: 40px
+
+		+r(992)
+			margin-bottom: 40px
+
+		+r(767)
+			margin-bottom: 30px
+		
+		+r(576)
+			margin-bottom: 0
+	
+	a
+		display: block
+
+	img
+		+transition
+		width: 100%
+		border-radius: 25px
+
+		+r(992)
+			border-radius: 15px
+
+	&__slider
+		padding-right: 40px
+		padding-left: 40px
+
+	&__slide
+		border-radius: 25px
+		opacity: 0.6
+		padding: 120px 0
+
+		+r(992)
+			border-radius: 15px
+
+		&::before
+			content: ''
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 45%
+			height: 30%
+			+cover
+			background-image: url(../img/video__play.png)
+			z-index: 2
+			opacity: 0
+			+transition
+
+			+r(576)
+				width: 80px
+				height: 85px
+
+		+r(992)
+			padding: 80px 0
+
+		+r(576)
+			padding: 40px 0
+
+	.swiper-slide-active
+
+		&::before
+			opacity: 1
+
+		img
+			border-radius: 30px
+
+	.swiper-slide-next
+		opacity: 1
+		z-index: 1
+
+		&::before
+			opacity: 1
+
+		a
+			transform: scale(2)
+
+			+r(576)
+				transform: scale(1)
+	
+	&__prev,
+	&__next
+		display: block
+		position: absolute
+		top: 40%
+		transform: translate(0, -50%)
+		width: 25px
+		height: 25px
+		border-top: 5px solid $accent
+		border-left: 5px solid $accent
+		z-index: 2
+
+	&__prev
+		left: 10px
+		transform: rotate(-45deg)
+
+	&__next
+		right: 10px
+		transform: rotate(135deg)
+
+	&__pagination
+		width: 100%
+		display: flex
+		justify-content: center
+
+		span
+			display: block
+			background-color: $accent
+			width: 36px
+			height: 36px
+			border-radius: 50%
+			margin: 0 5px
+			+transition
+			border: 8px solid $bg
+
+			+r(767)
+				width: 25px
+				height: 25px
+		
+		.swiper-pagination-bullet-active
+			border: 8px solid $accent
+			background-color: $bg
+
+			+r(767)
+				border: 5px solid $accent
 
 
 .footer

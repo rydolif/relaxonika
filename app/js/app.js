@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	//----------------------SLIDER-hero----------------------
+	//----------------------SLIDER-gallery----------------------
 		var mySwiper = new Swiper('.gallery__slider', {
 			slidesPerView: 1,
 			spaceBetween: 40,
@@ -14,6 +14,33 @@ document.addEventListener("DOMContentLoaded", function() {
 			navigation: {
 				nextEl: '.gallery__next',
 				prevEl: '.gallery__prev',
+			},
+			breakpoints: {
+				// when window width is >= 320px
+				576: {
+					slidesPerView: 3,
+					spaceBetween: 40
+				},
+				// when window width is >= 640px
+				1200: {
+					slidesPerView: 3,
+					spaceBetween: 40
+				}
+			}
+		});
+
+	//----------------------SLIDER-hero----------------------
+		var mySwiper = new Swiper('.video__slider', {
+			slidesPerView: 1,
+			spaceBetween: 40,
+			loop: true,
+			pagination: {
+				el: '.video__pagination',
+				clickable: 'true',
+			},
+			navigation: {
+				nextEl: '.video__next',
+				prevEl: '.video__prev',
 			},
 			breakpoints: {
 				// when window width is >= 320px
