@@ -25,6 +25,8 @@
 		"gulp-uglify-es": "^2.0.0"
 	},
 	"dependencies": {
-		"swiper": "^6.2.0"
+		"@fancyapps/fancybox": "^3.5.7",
+		"jquery": "^3.5.1",
+		"swiper": "^6.3.3"
 	}
 }

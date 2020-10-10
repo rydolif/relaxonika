@@ -660,7 +660,248 @@
 		margin-bottom: 0
 
 
+.gallery
+	padding-top: 105px
+	padding-bottom: 30px
 
+	+r(992)
+		padding-top: 70px
+
+	h2
+		text-align: center
+		margin-bottom: 70px
+
+		+r(992)
+			margin-bottom: 40px
+
+		+r(767)
+			margin-bottom: 30px
+	
+	a
+		display: block
+
+	img
+		+transition
+		width: 100%
+		border-radius: 50%
+
+	&__slider
+		padding-right: 40px
+		padding-left: 40px
+
+
+	&__slide
+		border-radius: 50%
+		opacity: 0.6
+		padding: 120px 0
+
+		+r(992)
+			padding: 80px 0
+
+		+r(576)
+			padding: 40px 0
+
+	.swiper-slide-active
+		img
+			+r(576)
+				transform: scale(1.1)
+				border: 2px solid $accent
+				box-shadow: 0 0 25px 0 rgba($accent, .7)
+
+	.swiper-slide-next
+		opacity: 1
+		z-index: 1
+
+		img
+			transform: scale(1.5)
+			border: 2px solid $accent
+			box-shadow: 0 0 25px 0 rgba($accent, .7)
+
+			+r(576)
+				transform: scale(1)
+				border: none
+				box-shadow: 0 0 2px 0 rgba($accent, 0)
+	
+	&__pagination
+		width: 100%
+		display: flex
+		justify-content: center
+
+		span
+			display: block
+			background-color: $accent
+			width: 36px
+			height: 36px
+			border-radius: 50%
+			margin: 0 5px
+			+transition
+			border: 8px solid $bg
+
+			+r(767)
+				width: 25px
+				height: 25px
+		
+		.swiper-pagination-bullet-active
+			border: 8px solid $accent
+			background-color: $bg
+
+			+r(767)
+				border: 5px solid $accent
+
+	&__prev,
+	&__next
+		display: block
+		position: absolute
+		top: 40%
+		transform: translate(0, -50%)
+		width: 25px
+		height: 25px
+		border-top: 5px solid $accent
+		border-left: 5px solid $accent
+
+	&__prev
+		left: 10px
+		transform: rotate(-45deg)
+
+	&__next
+		right: 10px
+		transform: rotate(135deg)
+
+
+.program
+	+cover
+	background-image: url(../img/program__bg.png)
+	padding-top: 175px
+	padding-bottom: 110px
+
+	+r(992)
+		padding: 145px 0 70px
+
+	h2
+		margin-bottom: 15px
+
+	h3
+		font-size: 20px
+		margin-bottom: 12px
+
+		+r(767)
+			font-size: 18px
+		
+		+r(576)
+			font-size: 16px
+
+	&__container
+		display: flex
+		justify-content: flex-end
+
+	&__subtitle
+		font-weight: 700
+		margin-bottom: 5px
+
+	&__wrap
+		width: 60%
+		margin-right: 0
+
+		+r(992)
+			width: 80%
+		
+		+r(767)
+			width: 100%
+
+	&__list
+		position: relative
+		padding-top: 50px
+
+		+r(767)
+			padding-top: 30px
+
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 3px
+			height: 86%
+			background-color: $accent
+
+			+r(992)
+				height: 85%
+			
+			+r(767)
+				height: 88%
+			
+			+r(576)
+				height: 87%
+			
+			+r(480)
+				height: 89%
+
+	&__item
+		position: relative
+		margin-bottom: 20px
+		font-size: 15px
+		padding-left: 45px
+
+		+r(767)
+			padding-left: 30px
+
+		+r(480)
+			margin-bottom: 15px
+
+		&::before
+			content: ''
+			position: absolute
+			top: 5px
+			left: -4px
+			display: block
+			width: 11px
+			height: 11px
+			background-color: $accent
+			border-radius: 50%
+
+		&--last
+			font-size: 17px
+			font-weight: 700
+
+			&::before
+				width: 25px
+				height: 25px
+				border: 3px solid $accent
+				left: -10px
+				background-color: $bg
+
+			+r(576)
+				font-size: 16px
+
+			h2
+				font-size: 30px
+
+				+r(767)
+					font-size: 24px
+				
+				+r(576)
+					font-size: 22px
+					margin-bottom: 5px
+
+			h3
+				font-size: 25px
+			
+				+r(767)
+					font-size: 20px
+				
+				+r(576)
+					font-size: 18px
+
+			p
+				margin-bottom: 10px
+
+			span
+				color: $text
+
+
+.calculation
+	padding-top: 75px
+	padding-bottom: 20px
 
 
 .footer

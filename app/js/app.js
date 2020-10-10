@@ -3,17 +3,31 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	//----------------------SLIDER-hero----------------------
-		// var mySwiper = new Swiper('.hero__slider', {
-		// 	loop: true,
-		// 	pagination: {
-		// 		el: '.hero__pagination',
-		// 		clickable: 'true',
-		// 	},
-		// 	navigation: {
-		// 		nextEl: '.hero__next',
-		// 		prevEl: '.hero__prev',
-		// 	},
-		// });
+		var mySwiper = new Swiper('.gallery__slider', {
+			slidesPerView: 1,
+			spaceBetween: 40,
+			loop: true,
+			pagination: {
+				el: '.gallery__pagination',
+				clickable: 'true',
+			},
+			navigation: {
+				nextEl: '.gallery__next',
+				prevEl: '.gallery__prev',
+			},
+			breakpoints: {
+				// when window width is >= 320px
+				576: {
+					slidesPerView: 3,
+					spaceBetween: 40
+				},
+				// when window width is >= 640px
+				1200: {
+					slidesPerView: 3,
+					spaceBetween: 40
+				}
+			}
+		});
 
 	//----------------------MODAL-----------------------
 		const modals = (triggerSelector, modalSelector, closeSelector) => {
