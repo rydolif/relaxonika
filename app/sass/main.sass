@@ -757,7 +757,8 @@
 		border-top: 5px solid $accent
 		border-left: 5px solid $accent
 		z-index: 2
-
+		outline: none
+		
 	&__prev
 		left: 10px
 		transform: rotate(-45deg)
@@ -1272,35 +1273,41 @@
 
 		+r(992)
 			border-radius: 15px
-
-		&::before
-			content: ''
-			position: absolute
-			left: 50%
-			top: 50%
-			transform: translate(-50%, -50%)
-			width: 45%
-			height: 30%
-			+cover
-			background-image: url(../img/video__play.png)
-			z-index: 2
-			opacity: 0
-			+transition
-
-			+r(576)
-				width: 80px
-				height: 85px
-
-		+r(992)
 			padding: 80px 0
 
 		+r(576)
 			padding: 40px 0
 
-	.swiper-slide-active
+		a
+			position: relative
+			display: block
 
-		&::before
-			opacity: 1
+			&::before
+				content: ''
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				width: 20%
+				height: 30%
+				+cover
+				background-image: url(../img/video__play.png)
+				z-index: 2
+				opacity: 0
+				+transition
+
+				+r(576)
+					width: 80px
+					height: 85px
+
+		img
+			z-index: 0
+
+	.swiper-slide-active
+		+r(576)
+			a
+				&::before
+					opacity: 1
 
 		img
 			border-radius: 30px
@@ -1309,8 +1316,9 @@
 		opacity: 1
 		z-index: 1
 
-		&::before
-			opacity: 1
+		a
+			&::before
+				opacity: 1
 
 		a
 			transform: scale(2)
@@ -1329,6 +1337,7 @@
 		border-top: 5px solid $accent
 		border-left: 5px solid $accent
 		z-index: 2
+		outline: none
 
 	&__prev
 		left: 10px
@@ -1363,6 +1372,251 @@
 
 			+r(767)
 				border: 5px solid $accent
+
+
+.start
+	+cover
+	background-image: url(../img/start__bg.png)
+	padding-top: 125px
+	padding-bottom: 110px
+	font-size: 16px
+
+	+r(992)
+		padding: 80px 0
+	
+	+r(767)
+		padding: 40px 0
+
+	h2
+		font-size: 30px
+		margin-bottom: 0
+
+		+r(767)
+			font-size: 24px
+
+	p
+		margin-bottom: 20px
+
+		+r(992)
+			margin-bottom: 10px
+
+	span
+		color: $accent
+
+	&__container
+		+between
+
+	&__img
+		width: 40%
+
+		+r(767)
+			width: 100%
+
+		img
+			width: 100%
+
+			+r(767)
+				display: block
+				margin: 0 auto 20px
+				max-width: 320px
+	
+	&__content
+		width: 52%
+
+		+r(992)
+			width: 57%
+
+		+r(767)
+			width: 100%
+
+	&__subtitle
+		font-size: 27px
+		font-family: $title
+
+		+r(992)
+			font-size: 24px
+		
+		+r(767)
+			font-size: 20px
+
+	&__place
+		display: flex
+		align-items: center
+		margin-bottom: 25px
+		font-size: 20px
+
+		+r(992)
+			font-size: 16px
+
+		p
+			margin-bottom: 0
+
+	&__btn
+		@extend .hero__btn
+		margin-bottom: 0
+		margin-left: 0
+
+
+.tabs
+	padding-top: 110px
+
+	+r(992)
+		padding-top: 70px
+
+	h2
+		margin-bottom: 10px
+
+	h3
+		font-size: 30px
+		text-align: right
+		margin-bottom: 35px
+
+		+r(767)
+			font-size: 24px
+
+	&__container
+		max-width: 920px
+
+	&__wrap
+		+between
+		padding-bottom: 40px
+		border-bottom: 8px solid $accent
+		width: 90%
+		margin: 0 auto 35px
+
+		+r(1200)
+			width: 100%
+
+		&_text
+			width: 60%
+
+			+r(480)
+				width: 100%
+				margin-bottom: 15px
+
+		&_subtitle
+			font-size: 22px
+			font-weight: 700
+			font-family: $title
+			margin-bottom: 10px
+
+			+r(767)
+				font-size: 18px
+
+		&_img
+			width: 35%
+
+			+r(480)
+				width: 50%
+				margin: 0 auto
+
+		img
+			width: 100%
+			border-radius: 50%
+			box-shadow: 0 0 25px 0 rgba($accent, 1)
+
+	&__list
+		+between
+		font-size: 25px
+
+		+r(992)
+			font-size: 20px
+		
+		+r(767)
+			font-size: 16px
+
+		li
+			width: 23%
+			display: block
+			text-align: center
+			border-radius: 50%
+
+		span
+			display: block
+			
+		img
+			max-width: 90%
+			border-radius: 50%
+			margin-bottom: 35px
+			box-shadow: 0 0 25px 0 rgba($accent, 1)
+
+			+r(992)
+				margin-bottom: 20px
+
+			+r(767)
+				margin-bottom: 10px
+
+
+.present
+	+cover
+	background-image: url(../img/present__bg.png)
+	padding-top: 110px
+	padding-bottom: 150px
+
+	+r(992)
+		padding-bottom: 80px
+
+	&__container
+		display: flex
+		justify-content: flex-end
+
+	&__content
+		width: 70%
+
+		+r(992)
+			width: 80%
+
+		+r(576)
+			width: 90%
+		
+		+r(480)
+			width: 100%
+
+	br
+		+r(992)
+			display: none
+
+	ul
+		margin-bottom: 35px
+	
+	li
+		position: relative
+		margin-bottom: 10px
+		padding-left: 25px
+
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 5px
+			display: block
+			width: 15px
+			height: 15px
+			border-radius: 50%
+			background-color: $accent
+
+		&:last-child
+			margin-bottom: 0
+
+	span
+		color: $accent
+
+	&__action
+		display: flex
+		align-items: flex-start
+		margin-bottom: 30px
+		font-weight: 700
+
+		img
+			margin-right: 10px
+
+	&__price
+		margin-bottom: 40px
+
+	&__btn
+		@extend .hero__btn
+		margin-bottom: 0
+		margin-left: 0
 
 
 .footer
