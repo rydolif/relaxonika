@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		});
 
-	//----------------------SLIDER-hero----------------------
+	//----------------------SLIDER-video----------------------
 		var mySwiper = new Swiper('.video__slider', {
 			slidesPerView: 1,
 			spaceBetween: 40,
@@ -54,6 +54,26 @@ document.addEventListener("DOMContentLoaded", function() {
 					spaceBetween: 40
 				}
 			}
+		});
+
+	//----------------------SLIDER-reviews----------------------
+		var mySwiper = new Swiper('.reviews__slider', {
+			slidesPerView: 1,
+			spaceBetween: 40,
+			loop: true,
+      pagination: {
+        el: '.reviews__pagination',
+				type: 'fraction',
+				renderFraction: function (currentClass, totalClass, index, total) {
+					return '<span class="' + currentClass + '"> '+ index +' </span>' +
+							' <div></div> ' +
+							'<span class="' + totalClass + '"> '+ total +' </span>';
+				},
+			},
+			navigation: {
+				nextEl: '.reviews__next',
+				prevEl: '.reviews__prev',
+			},
 		});
 
 	//----------------------MODAL-----------------------
