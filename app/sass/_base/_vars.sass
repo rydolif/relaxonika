@@ -98,12 +98,13 @@ button
 
 input, textarea, select
 	width: 100%
-	border: 1px solid #ebebeb
+	border: 0
+	border-bottom: 1px solid #ebebeb
 	outline: none
 	box-shadow: none
 	// -webkit-appearance: none
 	font-size: 16px
-	box-shadow: 0 0 6px rgba(42, 63, 125, 0.34)
+	background-color: transparent
 	
 	&:focus:required:invalid
 		border-color: red
@@ -125,7 +126,6 @@ input, textarea, select
 input, select
 	height: 50px
 	line-height: 50px
-	padding: 0 25px
 
 	&::placeholder
 		line-height: 50px

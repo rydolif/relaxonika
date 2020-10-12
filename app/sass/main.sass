@@ -1622,10 +1622,20 @@
 
 
 .reviews
+	padding-bottom: 80px
+
+	+r(992)
+		padding-bottom: 40px
 
 	h2
 		text-align: center
 		margin-bottom: 60px
+
+		+r(992)
+			margin-bottom: 30px
+
+		+r(767)
+			margin-bottom: 20px
 
 	&__header
 		+pseudo
@@ -1633,6 +1643,11 @@
 		padding-top: 125px
 		padding-bottom: 140px
 		margin-bottom: 40px
+
+		+r(992)
+			padding: 80px 0
+			margin-bottom: 30px
+				
 
 		&::before,
 		&::after
@@ -1644,10 +1659,16 @@
 			top: 0
 			height: 120px
 
+			+r(992)
+				height: 80px
+
 		&::after
 			top: auto
 			bottom: 0
 			height: 135px
+
+			+r(992)
+				height: 80px
 
 		h2
 			margin-bottom: 15px
@@ -1665,15 +1686,38 @@
 		
 		&_text
 			width: 65%
-		
+
+			+r(480)
+				width: 100%
+
+		&_img
+			width: 28%
+
+			+r(992)
+				width: 33%
+
+			+r(480)
+				display: block
+				width: 100%
+				max-width: 240px
+				margin: 0 auto 10px
+
 		p
 			margin-bottom: 20px
+
+			+r(992)
+				margin-bottom: 10px
 
 	&__navigation
 		display: flex
 		align-items: center
 		width: 65%
 		padding-left: 35%
+
+		+r(480)
+			padding-left: 0
+			justify-content: center
+			width: 100%
 
 	&__pagination
 		display: flex
@@ -1716,8 +1760,195 @@
 			transform: translate(0, 2px) rotate(-45deg)
 
 
-.footer
-	height: 500px
+.question
+	background-image: url(../img/question__bg.png)
+	margin-top: 0
+
+
+.sentence
+	padding-top: 150px
+	padding-bottom: 80px
+
+	+r(992)
+		padding-top: 80px
+		padding-bottom: 40px
+
+	+r(767)
+		padding: 50px 0 70px
+
+	&__container
+		position: relative
+
+	h2
+		margin-bottom: 0
+
+	h3
+		color: $text
+		font-size: 33px
+		margin-bottom: 25px
+
+		+r(992)
+			font-size: 24px
+			margin-bottom: 15px
+
+		+r(767)
+			font-size: 18px
+
+	p
+		margin-bottom: 15px
+
+	&__content
+		width: 47%
+
+		+r(992)
+			width: 60%
+		
+		+r(767)
+			width: 70%
+		
+		+r(480)
+			width: 100%
+
+	&__img
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translate(0, -50%)
+		max-width: 60%
+
+		+r(992)
+			z-index: -1
+
+		+r(576)
+			top: auto
+			transform: translate(0, 0)
+			bottom: -60px
+
+	&__btn
+		@extend .hero__btn
+		margin-bottom: 0
+		margin-left: 0
+
+
+.causes
+	+cover
+	background-image: url(../img/causes__bg.png)
+	padding-top: 90px
+	padding-bottom: 30px
+
+	h2
+		text-align: center
+
+	br
+		+r(992)
+			display: none
+
+	&__item
+		position: relative
+		text-align: center
+		margin-bottom: 5px
+
+		&--last
+			padding-bottom: 65px
+			margin-bottom: 25px
+
+			&::after
+				content: ''
+				position: absolute
+				bottom: 0
+				height: 35px
+				width: 3px
+				background-color: $accent
+
+		&_img
+			position: relative
+			padding-top: 60px
+
+			+r(767)
+				padding-top: 30px
+
+			&::before
+				content: ''
+				position: absolute
+				left: 50%
+				top: 0
+				background-color: $accent
+				width: 3px
+				height: 60px
+
+				+r(767)
+					height: 30px
+					width: 2px
+
+			img
+				width: 100px
+				height: 100px
+				margin-bottom: 20px
+
+				+r(992)
+					width: 70px
+					height: 70px
+					margin-bottom: 10px
+
+		h3
+			margin-bottom: 20px
+			font-size: 25px
+
+			+r(992)
+				font-size: 22px
+				margin-bottom: 15px
+			
+			+r(767)
+				font-size: 18px
+
+		p
+			margin-bottom: 25px
+
+			+r(992)
+				margin-bottom: 15px
+
+			&:last-child
+				margin-bottom: 0
+
+	&__form
+		&_line
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
+			margin-bottom: 50px
+
+			+r(767)
+				flex-direction: column
+				align-items: center
+				margin-bottom: 20px
+
+		input
+			width: 250px
+			margin-right: 50px
+
+			+r(767)
+				margin-right: 0
+				margin-bottom: 15px
+
+			&:last-child
+				margin-right: 0
+
+	&__btn
+		@extend .hero__btn
+		max-width: 320px
+		width: 100%
+
+	&__footer
+		text-align: center
+		font-size: 12px
+
+		p
+			margin-bottom: 10px
+
+		&_big
+			font-size: 14px
+			margin-bottom: 15px
+
 
 
 // -----MODAL-----
