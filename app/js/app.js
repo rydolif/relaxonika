@@ -105,7 +105,10 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 	
 		};
-		// modals('.order__open', '.modal--order', '.modal--order .modal__close');
+		modals('.free__open', '.modal--free', '.modal--free .modal__close');
+		modals('.interview__open', '.modal--interview', '.modal--interview .modal__close');
+		modals('.question__open', '.modal--question', '.modal--question .modal__close');
+		modals('.sing__open', '.modal--sing', '.modal--sing .modal__close');
 
 	//----------------------SCROLL-----------------------
 		const scrollTo = (scrollTo) => {

@@ -99,12 +99,13 @@ button
 input, textarea, select
 	width: 100%
 	border: 0
-	border-bottom: 1px solid #ebebeb
+	border-bottom: 1px solid #fff
 	outline: none
 	box-shadow: none
 	// -webkit-appearance: none
-	font-size: 16px
 	background-color: transparent
+	color: $text
+	+transition
 	
 	&:focus:required:invalid
 		border-color: red
@@ -119,7 +120,7 @@ input, textarea, select
 		-webkit-appearance: none
 
 	&::placeholder
-		color: #c4c4c4
+		color: $text
 		font-size: 12px
 		line-height: 50px
 
@@ -129,7 +130,9 @@ input, select
 
 	&::placeholder
 		line-height: 50px
-		font-size: 16px
+
+option
+	color: $bg
 
 textarea
 	&::placeholder

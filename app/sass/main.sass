@@ -1953,22 +1953,32 @@
 
 // -----MODAL-----
 .modal
-	position: relative
-	max-width: 725px
-	width: 100%
-	height: auto
-	padding: 60px 75px 145px
-	margin: 20px 0
-	background-color: #fff
+	position: fixed
+	padding: 60px
+	background-color: rgba($bg, .7)
 	z-index: 1
-	box-shadow: 0 0 16px rgba(0, 0, 0, 0.29)
-	border-radius: 20px
-	border: 2px solid #273a72
 	display: none
+	justify-content: center
+	align-items: flex-start
+	width: 100vw
+	height: 100vh
+	z-index: 10000
+	overflow: auto
 
-	h3
-		justify-content: flex-start
-		margin-bottom: 50px
+	+r(992)
+		padding: 20px
+	
+	+r(480)
+		padding: 15px
+
+	h2
+		margin-bottom: 70px
+
+		+r(992)
+			margin-bottom: 50px
+
+		+r(767)
+			margin-bottom: 30px
 
 	&__close
 		position: absolute
@@ -1981,7 +1991,11 @@
 		border: none
 		cursor: pointer
 		transition: all .6s
-		background-color: #fff
+		background-color: transparent
+
+		+r(480)
+			top: 0
+			right: 0
 
 		&:hover,
 		&:focus
@@ -1996,14 +2010,80 @@
 			position: absolute
 			left: 50%
 			top: 50%
-			background: #273a72
+			background: #fff
 			transition: all .6s
 			border-radius: 4px
-			height: 22px
-			width: 3px
+			height: 27px
+			width: 5px
 
 			&:first-child
 				transform: translate(-50%, -50%) rotate(45deg)
 
 			&:last-child
 				transform: translate(-50%, -50%) rotate(-45deg)
+
+	&__form
+		position: relative
+		+cover
+		background-image: url(../img/modal--free.jpg)
+		box-shadow: 0 0 25px 0 rgba($accent, 1)
+		padding: 60px 85px 10px
+		text-align: center
+		max-width: 970px
+		width: 100%
+
+		+r(992)
+			padding: 30px 45px 10px
+
+		+r(480)
+			padding: 15px
+	
+	&__btn
+		@extend .hero__btn
+		max-width: 300px
+		width: 100%
+
+	input, select
+		border-bottom: 4px solid #fff
+
+		&::placeholder
+			font-weight: 700
+			font-size: 24px
+
+			+r(992)
+				font-size: 18px
+
+			+r(767)
+				font-size: 16px
+
+			+r(576)
+				font-size: 14px
+
+	p
+		font-size: 16px
+
+		+r(767)
+			font-size: 12px
+
+	&__line
+		margin-bottom: 35px
+
+		+r(767)
+			margin-bottom: 15px
+
+		&--two
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+
+			input
+				width: 48%
+
+				+r(480)
+					width: 100%
+					margin-bottom: 15px
+
+	br
+		+r(767)
+			display: none
+		

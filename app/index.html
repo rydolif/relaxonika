@@ -6,7 +6,7 @@
 	<title>Relaxonika - Обучающий курс массажных практик</title>
 	<meta name="description" content="Startup HTML Optimized">
 	<meta name="viewport" content="width=device-width">
-	<link rel="icon" href="img/favicon.png">
+	<link rel="icon" href="img/favicon.ico">
 	<meta property="og:image" content="img/preview.jpg">
 	<link rel="stylesheet" href="css/app.min.css?v=1">
 	<link rel="stylesheet" href="fancybox/jquery.fancybox.min.css?v=1">
@@ -29,7 +29,7 @@
 					<li><a href="#" target="_blank"><img src="img/header__tel.png" alt=""></a></li>
 				</ul>
 				<a href="tel:+79250294919" class="header__phone">+7 925 029 49 19</a>
-				<a href="#" class="header__btn btn">Запись на обучение</a>
+				<a href="#" class="sing__open header__btn btn">Запись на обучение</a>
 			</div>
 
 		</div>
@@ -48,7 +48,7 @@
 			</p>
 			<h3>Запись на бесплатный открытый урок 30 сентября 2020</h3>
 			<a href="#" class="hero__btn btn">Записаться на открытый урок</a>
-			<a href="#" class="hero__next"></a>
+			<a href="#" class="sing__open hero__next"></a>
 		</div>
 	</section>
 
@@ -105,7 +105,7 @@
 					</p>
 				</div>
 			</div>
-			<a href="#" class="info__btn btn">Записаться на обучение</a>
+			<a href="#" class="sing__open info__btn btn">Записаться на обучение</a>
 		</div>
 	</section>
 
@@ -219,7 +219,7 @@
 				поиску новых ярких ощущений и перспектив
 			</h4>
 
-			<a href="#" class="course__btn btn">Это для меня, хочу записаться!</a>
+			<a href="#" class="sing__open course__btn btn">Это для меня, хочу записаться!</a>
 
 		</div>
 	</section>
@@ -291,7 +291,7 @@
 				Получите новые знания, незабываемый опыт тактильного общения, уверенность
 				<br>в себе и ощущения, о которых другие только мечтают.
 			</p>
-			<a href="#" class="statistics__btn btn">Отлично! Записаться на обучение!</a>
+			<a href="#" class="sing__open statistics__btn btn">Отлично! Записаться на обучение!</a>
 		</div>
 	</section>
 
@@ -560,7 +560,7 @@
 						</span>
 					</li>
 				</ul>
-				<a href="#" class="training__btn btn">Записаться на бесплатное пробное занятие</a>
+				<a href="#" class="free__open training__btn btn">Записаться на бесплатное пробное занятие</a>
 			</div>
 
 			<img src="img/training__img.png" alt="" class="training__img">
@@ -578,7 +578,7 @@
 				взаимоотношений, дарите близким заботу, нежность и любовь
 			</p>
 
-			<a href="#" class="sing__btn btn">Записаться на курс</a>
+			<a href="#" class="sing__open sing__btn btn">Записаться на курс</a>
 		</div>
 	</section>
 
@@ -640,7 +640,7 @@
 					<img src="img/training__icon2.png" alt="">
 					<p><b><span>Адрес:</span></b> М. Октябрьская С 19 до 22 часов по будням и с 11 до 18 в выходные дни</p>
 				</div>
-				<a href="#" class="start__btn btn">Записаться на обучение</a>
+				<a href="#" class="sing__open start__btn btn">Записаться на обучение</a>
 			</div>
 
 		</div>
@@ -760,7 +760,7 @@
 					Стоимость обучения <span><b>14.800 руб </b></span>
 					<br>При оплате на сайте, Ваша скидка <span><b>2.300 руб</b></span>
 				</p>
-				<a href="#" class="present__btn btn">Оплатить 12.500 вместо 14.800</a>
+				<a href="#" class="sing__open present__btn btn">Оплатить 12.500 вместо 14.800</a>
 			</div>
 		</div>
 	</section>
@@ -836,7 +836,7 @@
 				Просто оставьте контакты , наши сотрудники свяжутся с Вами и 
 				<br>ответят на все вопросы, предложения и пожелания
 			</p>
-			<a href="#" class="sing__btn btn">Оставить контакты</a>
+			<a href="#" class="question__open sing__btn btn">Оставить контакты</a>
 		</div>
 	</section>
 
@@ -851,7 +851,7 @@
 					а также новые знакомства и приятное общение?
 				</p>
 				<p><b>Позвоните нам и работайте у нас моделью!</b></p>
-				<a href="#" class="sentence__btn btn">Хочу работать моделью!</a>
+				<a href="#" class="interview__open sentence__btn btn">Хочу работать моделью!</a>
 			</div>
 
 			<img src="img/sentence__img.png" alt="" class="sentence__img">
@@ -931,8 +931,8 @@
 
 			<form class="causes__form">
 				<div class="causes__form_line">
-					<input type="text" name="name" placeholder="Имя">
-					<input type="tel" name="tel" placeholder="Телефон">
+					<input type="text" name="name" placeholder="Имя" required>
+					<input type="tel" name="tel" placeholder="Телефон" required>
 				</div>
 
 				<button class="causes__btn btn">Отправить</button>
@@ -953,44 +953,133 @@
 				</p>
 			</div>
 
-
 		</div>
 	</section>
 
-	<footer class="footer">
-		<div class="footer__container container"></div>
-	</footer>
-
-	<div class="modal modal--services">
-		<form action="sendmail.php" class="modal__form form" method="post">
+	<div class="modal modal--free">
+		<form class="modal__form form" method="post">
 
 			<button class="close modal__close" type="button">
 				<span></span>
 				<span></span>
 			</button>
 
-			<h2 class="modal__title">Оставьте заявку на <br>услугу</h2>
-			<input type="hidden" name="subject" value="Оставьте заявку на услугу">
-
+			<h2>Записываюсь на беспатный пробный урок!</h2>
 			<div class="modal__line">
-				<input type="text" name="name" placeholder="Имя" class="modal__input" required>
+				<input type="text" name="name" placeholder="Ваше имя" required>
 			</div>
 			<div class="modal__line">
-				<input type="tel" name="phone" placeholder="Телефон" class="modal__input" required>
+				<input type="tel" name="phone" placeholder="Ваш телефон" required>
 			</div>
 			<div class="modal__line">
-				<button type="submit" class="modal__btn" name="submit">Отправить</button>
+				<button type="submit" class="modal__btn btn" name="submit">Записаться</button>
 			</div>
+			<p>Нажимая кнопку, Вы даёте своё согласие на <br>обработку персональных даных  по 152-ФЗ</p>
 		</form>
 	</div>
 
-	<div class="modal modal--thanks">
-		<button class="close thanks_close" type="button">
-			<span></span>
-			<span></span>
-		</button>
-		<h3>Спасибо за доверие!</h3>
-		<p>Мы обязательно с вами свяжемся!</p>
+	<div class="modal modal--interview">
+		<form class="modal__form form" method="post" style="background-image: url(img/modal--interview.jpg);">
+
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h2>Записываюсь на беспатный пробный урок!</h2>
+			<div class="modal__line">
+				<input type="text" name="name" placeholder="Ваше имя" required>
+			</div>
+			<div class="modal__line">
+				<input type="tel" name="phone" placeholder="Ваш телефон" required>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="modal__btn btn" name="submit">Записаться</button>
+			</div>
+			<p>Нажимая кнопку, Вы даёте своё согласие на <br>обработку персональных даных  по 152-ФЗ</p>
+		</form>
+	</div>
+
+	<div class="modal modal--question">
+		<form class="modal__form form" method="post" style="background-image: url(img/modal--question.jpg);">
+
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h2>Свяжитесь, пожалуйста, со мной для <br>уточнения вопросов</h2>
+			<div class="modal__line">
+				<input type="text" name="name" placeholder="Ваше имя" required>
+			</div>
+			<div class="modal__line">
+				<input type="tel" name="phone" placeholder="Ваш телефон" required>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="modal__btn btn" name="submit">Записаться</button>
+			</div>
+			<p>Нажимая кнопку, Вы даёте своё согласие на <br>обработку персональных даных  по 152-ФЗ</p>
+		</form>
+	</div>
+
+	<div class="modal modal--sing">
+		<form class="modal__form form" method="post" style="background-image: url(img/modal--question.jpg);">
+
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h2>Записываюсь на обучение</h2>
+			<div class="modal__line modal__line--two">
+				<input type="text" name="name" placeholder="Ваше имя" required>
+				<input type="tel" name="phone" placeholder="Ваш телефон" required>
+			</div>
+			<div class="modal__line">
+				<select>
+					<option value="">Выберите программу обучения: </option>
+					<option value="">Выберите программу обучения: </option>
+					<option value="">Выберите программу обучения: </option>
+					<option value="">Выберите программу обучения: </option>
+				</select>
+			</div>
+			<div class="modal__line">
+				<select>
+					<option value="">Выберите вторую программу со скидкой 10% </option>
+					<option value="">Выберите вторую программу со скидкой 10% </option>
+					<option value="">Выберите вторую программу со скидкой 10% </option>
+					<option value="">Выберите вторую программу со скидкой 10% </option>
+				</select>
+			</div>
+			<div class="modal__line">
+				<select>
+					<option value="">Выберите еще одну программу и получите скидку 15% на все обучение</option>
+					<option value="">Выберите еще одну программу и получите скидку 15% на все обучение</option>
+					<option value="">Выберите еще одну программу и получите скидку 15% на все обучение</option>
+					<option value="">Выберите еще одну программу и получите скидку 15% на все обучение</option>
+				</select>
+			</div>
+			<div class="modal__line">
+				<select>
+					<option value="">При необходимости, выберите модуль доп. практики со скидкой 20%</option>
+					<option value="">При необходимости, выберите модуль доп. практики со скидкой 20%</option>
+					<option value="">При необходимости, выберите модуль доп. практики со скидкой 20%</option>
+					<option value="">При необходимости, выберите модуль доп. практики со скидкой 20%</option>
+				</select>
+			</div>
+			<div class="modal__line">
+				<select>
+					<option value="">Комментарий</option>
+					<option value="">Комментарий</option>
+					<option value="">Комментарий</option>
+					<option value="">Комментарий</option>
+				</select>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="modal__btn btn" name="submit">Записаться</button>
+			</div>
+			<p>Нажимая кнопку, Вы даёте своё согласие на <br>обработку персональных даных  по 152-ФЗ</p>
+		</form>
 	</div>
 
 </body>
