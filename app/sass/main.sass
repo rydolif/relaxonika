@@ -904,11 +904,11 @@
 
 .calculation
 	padding-top: 75px
-	padding-bottom: 20px
+	padding-bottom: 60px
 	z-index: 2
 
 	+r(992)
-		padding-top: 40px
+		padding: 40px 0
 
 	h2
 		text-align: center
@@ -1764,6 +1764,9 @@
 	background-image: url(../img/question__bg.png)
 	margin-top: 0
 
+	&::before
+		display: none
+
 
 .sentence
 	padding-top: 150px
@@ -1828,6 +1831,7 @@
 		@extend .hero__btn
 		margin-bottom: 0
 		margin-left: 0
+		margin-top: 30px
 
 
 .causes
@@ -1942,12 +1946,17 @@
 		text-align: center
 		font-size: 12px
 
+		a
+			color: $accent
+
 		p
-			margin-bottom: 10px
+			margin-bottom: 5px
+			color: rgba($text, .7)
 
 		&_big
 			font-size: 14px
-			margin-bottom: 15px
+			margin-bottom: 15px !important
+			color: $text !important
 
 
 
